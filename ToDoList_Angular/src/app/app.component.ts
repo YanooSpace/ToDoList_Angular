@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * filter()
+   * filter() 왜안올라가 ?
    * 
    */
   onDelete(id: number) {
