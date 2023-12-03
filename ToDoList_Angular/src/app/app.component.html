@@ -1,1 +1,36 @@
-<div class="text-slate-800">이것은 테스트</div>
+<div class="flex flex-col justify-center w-full h-[100vh]">
+  <div class="flex flex-col h-[92vh] items-center pt-20">
+    <div class="flex flex-col gap-10 items-center bg-slate-200 w-[50vw] max-w-screen-md p-10">
+      <!-- Profile -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-[8rem] h-[8rem] rounded-full bg-black">
+          <img src="" alt="">
+        </div>
+        <div>yanoo</div>
+        <div>오늘할일을 미루지 말자</div>
+      </div>
+
+      <!-- ToDo -->
+      <div class="flex flex-col gap-3 items-center w-[80%]">
+
+        <!-- ToDo-Input -->
+        <div class="grid grid-cols-4 gap-2 w-full">
+          <input #todoInput type="text" class="p-3 w-full h-full col-span-3 rounded-lg">
+          <button (click)="onCreate(todoInput)" class="col-span-1 bg-red-400 rounded-lg text-white">생성</button>
+        </div>
+
+        <!-- ToDo-List -->
+        <div *ngFor="let todo of schedules" class="grid grid-cols-8 gap-2 w-full">
+          <div class="col-span-6 p-2  overflow-x-hidden">{{ todo.text }}</div>
+          <button (click)="onUpdate(todo)" class="col-span-1 rounded-lg bg-blue-500 text-white p-2">수정</button>
+          <button (click)="onDelete(todo.id)" class="col-span-1 rounded-lg bg-green-500 text-white p-2">삭제</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ToustBox -->
+  <div class="flex-1 flex items-center justify-center">
+    <div *ngIf="">나는야 토스트박스</div>
+  </div>
+</div>
