@@ -26,6 +26,10 @@ export class AppComponent implements OnInit {
     console.log('reset')
   }
 
+  /**
+   * push({})
+   * @param element : 입력받은 input 값 
+   */
   onCreate(element: HTMLInputElement) {
     console.log(element.value)
 
@@ -40,7 +44,7 @@ export class AppComponent implements OnInit {
   /**
    * if(!result) : 만약에 결과가 다르다면 리턴해주고 
    * else if(updateSchedule.text === result) : 수정한 내용과 결과가 같다면
-   * map : 
+   * map(()=>{}) : 
    */
   onUpdate(updateSchedule: Schedule) {
     const result = window.prompt('내용을 수정해주세요', updateSchedule.text);
